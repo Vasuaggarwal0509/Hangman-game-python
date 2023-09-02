@@ -25,7 +25,7 @@ print('Let\'s play Hangman!')
 
 
 
-words=['kids','rythm','poem','system','washing','computer','nails','box','go','image','hairs','ears','mouse','chairs']
+words=['love','lovely','flower','rythm','laptops','clock','poem','system','computer','image','temperature','ears','mouse']
 
 # word=random.choice(words)
 word=random.choice(words)
@@ -39,14 +39,14 @@ life=5
 while life!=0:
     print('enter your letter')
     letter=str(input())
-    if letter in word:
-        
-        place_2=find_index(letter,word)
-        space_list[place_2]=letter
-        time.sleep(1)
-        print(f"Aiyoo! Sahi jawab ji {convert(space_list)} Guess karo ji")
 
-        
+    if letter in word:
+       for i in range (len(word)):
+           if word[i]==letter:
+               space_list[i]=letter
+           
+       
+       print(f"Aiyoo! Sahi jawab ji {convert(space_list)} Guess karo ji")    
     else:
         life-=1
 
