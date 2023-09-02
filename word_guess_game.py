@@ -66,3 +66,6 @@ while life!=0:
 
 if '_'in space_list and life==0:
     print(f'you loose'+'The word was {word}')
+    time.sleep(4)
+    exit()
+    
